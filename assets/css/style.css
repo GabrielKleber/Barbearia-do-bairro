@@ -1,0 +1,303 @@
+/* ============================= */
+/* RESET / BASE */
+/* ============================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+
+section {
+  padding: 80px 20px;
+}
+
+h1,
+h2 {
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  color: #aaa;
+  margin-bottom: 50px;
+}
+
+/* ============================= */
+/* HERO */
+/* ============================= */
+
+.hero {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://images.unsplash.com/photo-1517832606299-7ae9b720a186");
+  background-size: cover;
+  background-position: center;
+  padding: 120px 20px;
+  display: flex;
+}
+
+.left-hero {
+  width: 55%;
+  text-align: left;
+}
+
+.left-hero h1 {
+  font-size: 3rem;
+}
+
+/* ============================= */
+/* BOTÕES */
+/* ============================= */
+
+.btn-whatsapp {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 25px;
+  background: #25d366;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+}
+
+/* BOTÃO FLUTUANTE */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  color: white;
+  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background: #1ebe5d;
+}
+
+/* ============================= */
+/* SERVIÇOS */
+/* ============================= */
+
+.services {
+  background: #0f0f0f;
+}
+
+.services h2 {
+  font-size: 36px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: #1a1a1a;
+  padding: 40px 30px;
+  border-radius: 18px;
+  transition: 0.4s;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #222;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 184, 0, 0.15) 0%,
+    transparent 60%
+  );
+  top: -50%;
+  left: -50%;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: #ffb800;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.icon {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #bbb;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffb800;
+}
+
+/* ============================= */
+/* GALERIA */
+/* ============================= */
+
+.galeria {
+  background: #111;
+}
+
+.gallery-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  transition: 0.6s;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px;
+  font-size: 22px;
+  font-weight: bold;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+  transform: translateY(100%);
+  transition: 0.5s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item:hover .overlay {
+  transform: translateY(0);
+}
+
+/* ============================= */
+/* QUEM SOMOS */
+/* ============================= */
+
+.quem-somos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.quem-texto {
+  max-width: 500px;
+  text-align: left;
+}
+
+.quem-texto p {
+  margin-bottom: 15px;
+}
+
+.quem-img img {
+  width: 550px;
+  border-radius: 12px;
+}
+
+/* ============================= */
+/* DEPOIMENTOS */
+/* ============================= */
+
+.depoimentos-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.depoimento-card {
+  background: #1c1c1c;
+  padding: 25px;
+  border-radius: 12px;
+  width: 260px;
+  transition: 0.3s;
+}
+
+.depoimento-card:hover {
+  transform: translateY(-5px);
+}
+
+.depoimento-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.depoimento-card p {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.depoimento-card span {
+  font-weight: bold;
+}
+
+/* ============================= */
+/* HORÁRIOS & FOOTER */
+/* ============================= */
+
+.horarios ul {
+  list-style: none;
+}
+
+footer {
+  padding: 20px;
+  background: #000;
+}
