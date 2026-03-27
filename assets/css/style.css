@@ -16,7 +16,7 @@ body {
 }
 
 section {
-  padding: 80px 20px;
+  padding: 60px 18px;
 }
 
 h1,
@@ -26,7 +26,12 @@ h2 {
 
 .subtitle {
   color: #aaa;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* ============================= */
@@ -39,17 +44,19 @@ h2 {
     url("https://images.unsplash.com/photo-1517832606299-7ae9b720a186");
   background-size: cover;
   background-position: center;
-  padding: 120px 20px;
+  padding: 90px 20px;
   display: flex;
+  justify-content: center;
 }
 
 .left-hero {
-  width: 55%;
-  text-align: left;
+  max-width: 600px;
+  text-align: center;
 }
 
 .left-hero h1 {
-  font-size: 3rem;
+  font-size: 2.2rem;
+  line-height: 1.2;
 }
 
 /* ============================= */
@@ -72,30 +79,21 @@ h2 {
   background: #1ebe5d;
 }
 
-/* BOTÃO FLUTUANTE */
-
 .whatsapp-float {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background: #25d366;
-  color: white;
-  font-size: 28px;
-  width: 60px;
-  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  font-size: 26px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
+  background: #25d366;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  color: white;
   z-index: 999;
-  transition: 0.3s;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  background: #1ebe5d;
 }
 
 /* ============================= */
@@ -107,69 +105,46 @@ h2 {
 }
 
 .services h2 {
-  font-size: 36px;
+  font-size: 28px;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: 1fr;
+  gap: 22px;
 }
 
 .service-card {
   background: #1a1a1a;
-  padding: 40px 30px;
+  padding: 30px 22px;
   border-radius: 18px;
   transition: 0.4s;
-  position: relative;
-  overflow: hidden;
   border: 1px solid #222;
 }
 
-.service-card::before {
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 184, 0, 0.15) 0%,
-    transparent 60%
-  );
-  top: -50%;
-  left: -50%;
-  opacity: 0;
-  transition: 0.5s;
-}
-
-.service-card:hover::before {
-  opacity: 1;
-}
-
 .service-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   border-color: #ffb800;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
 }
 
 .icon {
-  font-size: 42px;
+  font-size: 38px;
   margin-bottom: 15px;
 }
 
 .service-card h3 {
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
 .service-card p {
   color: #bbb;
   font-size: 15px;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 }
 
 .price {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
   color: #ffb800;
 }
@@ -178,49 +153,18 @@ h2 {
 /* GALERIA */
 /* ============================= */
 
-.galeria {
-  background: #111;
-}
-
 .gallery-grid {
-  margin-top: 50px;
+  margin-top: 40px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
-
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 18px;
+  grid-template-columns: 1fr;
+  gap: 15px;
 }
 
 .gallery-item img {
   width: 100%;
-  height: 320px;
+  height: 250px;
   object-fit: cover;
-  transition: 0.6s;
-}
-
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 25px;
-  font-size: 22px;
-  font-weight: bold;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
-  transform: translateY(100%);
-  transition: 0.5s;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.1);
-}
-
-.gallery-item:hover .overlay {
-  transform: translateY(0);
+  border-radius: 16px;
 }
 
 /* ============================= */
@@ -229,24 +173,19 @@ h2 {
 
 .quem-somos {
   display: flex;
+  flex-direction: column;
+  gap: 25px;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
 }
 
 .quem-texto {
-  max-width: 500px;
-  text-align: left;
-}
-
-.quem-texto p {
-  margin-bottom: 15px;
+  text-align: center;
 }
 
 .quem-img img {
-  width: 550px;
-  border-radius: 12px;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 14px;
 }
 
 /* ============================= */
@@ -255,49 +194,103 @@ h2 {
 
 .depoimentos-cards {
   display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
-  margin-top: 30px;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
 }
 
 .depoimento-card {
   background: #1c1c1c;
   padding: 25px;
   border-radius: 12px;
-  width: 260px;
-  transition: 0.3s;
-}
-
-.depoimento-card:hover {
-  transform: translateY(-5px);
-}
-
-.depoimento-card img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-}
-
-.depoimento-card p {
-  font-style: italic;
-  margin-bottom: 10px;
-}
-
-.depoimento-card span {
-  font-weight: bold;
+  width: 100%;
+  max-width: 320px;
 }
 
 /* ============================= */
-/* HORÁRIOS & FOOTER */
+/* HORÁRIOS */
 /* ============================= */
 
 .horarios ul {
   list-style: none;
+  line-height: 1.8;
 }
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
 
 footer {
   padding: 20px;
   background: #000;
+}
+
+/* ===================================================== */
+/* 💻 TABLET */
+/* ===================================================== */
+
+@media (min-width: 768px) {
+  section {
+    padding: 80px 40px;
+  }
+
+  .left-hero {
+    text-align: left;
+  }
+
+  .left-hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .depoimentos-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* ===================================================== */
+/* 🖥 DESKTOP */
+/* ===================================================== */
+
+@media (min-width: 1024px) {
+  .hero {
+    justify-content: flex-start;
+    padding: 120px 80px;
+  }
+
+  .left-hero {
+    width: 55%;
+  }
+
+  .left-hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .quem-somos {
+    flex-direction: row;
+    text-align: left;
+    gap: 50px;
+  }
+
+  .quem-texto {
+    max-width: 500px;
+    text-align: left;
+  }
 }
